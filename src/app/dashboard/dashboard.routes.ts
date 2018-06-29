@@ -6,10 +6,18 @@ import { Routes, RouterModule } from '@angular/router';
  */
 import { DashboardComponent } from './dashboard.component';
 
+/**
+ * Routes
+ */
+import { chartFactoryRoutes } from './chart-factory/chart-factory.routes';
+
 export const dashboardRoutes: Routes = [
 	{
 		path: '',
-    component: DashboardComponent,
+		component: DashboardComponent,
+		children: [
+			...chartFactoryRoutes
+		]
 	}
 ];
 
