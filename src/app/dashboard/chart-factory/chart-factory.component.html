@@ -1,1 +1,30 @@
-<h1>Chart wrapper</h1>
+<!-- <ng-container *ngFor="let item of chartData" [ngSwitch]="item.type">
+  <app-chart-pie-drag *ngSwitchCase="'chartPieDrag'" [params]="item.data"></app-chart-pie-drag>
+  <app-chart-pie *ngSwitchCase="'chartPie'" [params]="item.data"></app-chart-pie>
+</ng-container> -->
+
+<column-multi-hc></column-multi-hc>
+
+<pie-hc></pie-hc>
+
+<pie-donut-hc></pie-donut-hc>
+
+<basis-area-hc></basis-area-hc>
+
+<basis-line-hc></basis-line-hc>
+
+<column-axis-break></column-axis-break>
+
+<div class="swiper-container" [swiper]="config" (indexChange)="checkIndexChanging($event)">
+  <div class="swiper-wrapper">
+    <div *ngFor="let item of chartData" class="swiper-slide slide">
+        <mat-card>
+          <ng-container [ngSwitch]="item.type">
+            <app-chart-pie-drag *ngSwitchCase="'chartPieDrag'" [params]="item.data"></app-chart-pie-drag>
+            <app-chart-pie *ngSwitchCase="'chartPie'" [params]="item.data"></app-chart-pie>
+          </ng-container>
+        </mat-card>
+    </div>
+
+  </div>
+</div>

@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+
+import { SwiperComponent, SwiperDirective, SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
+import { chartData } from '../../shared/constants/chart-data';
 
 @Component({
   selector: 'app-chart-factory',
@@ -6,5 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['chart-factory.component.scss'],
 })
 export class ChartFactoryComponent {
+  //TODO type
+  public chartData = chartData;
 
+  public config: SwiperConfigInterface = {
+    a11y: true,
+    direction: 'horizontal',
+    slidesPerView: 1,
+    initialSlide: 1,
+    observer: true
+  };
+  @ViewChild(SwiperDirective) directiveRef?: SwiperDirective;
+
+  public checkIndexChanging(index) {
+    console.log('index', index);
+  }
 }

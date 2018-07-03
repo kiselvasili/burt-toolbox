@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { SharedModule } from './../shared/shared.module';
 
 /**
  * Modules
  */
+import { NgModule } from '@angular/core';
 import { DashboardRoutingModule } from './dashboard.routes';
 import { ChartFactoryModule } from './chart-factory/chart-factory.module';
 
@@ -21,7 +22,8 @@ export const components: any[] = [
 	],
 	imports: [
 		DashboardRoutingModule,
-		ChartFactoryModule
+		ChartFactoryModule,
+		SharedModule
 	]
 })
 export class DashboardModule { }
