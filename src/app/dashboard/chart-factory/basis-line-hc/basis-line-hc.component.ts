@@ -19,6 +19,9 @@ export class BasisLineHCComponent {
       credits: {
         enabled: false
       },
+      exporting: {
+        enabled: false
+      },
       title: {
         text: 'Solar Employment Growth by Sector, 2010-2016'
       },

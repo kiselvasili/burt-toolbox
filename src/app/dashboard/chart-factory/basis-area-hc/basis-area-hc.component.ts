@@ -20,6 +20,9 @@ export class BasisAreaHCComponent {
       credits: {
         enabled: false
       },
+      exporting: {
+        enabled: false
+      },
       chart: {
         type: 'area'
       },

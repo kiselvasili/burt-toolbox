@@ -1,2 +1,10 @@
-<app-chart-factory></app-chart-factory>
 <!-- <router-outlet></router-outlet> -->
+
+<div class="swiper-container" [swiper]="config">
+  <div class="swiper-wrapper">
+    <div *ngFor="let item of chartData" class="swiper-slide">
+      <app-chart-factory [chartItem]="item"></app-chart-factory>
+      
+    </div>
+  </div>
+</div>

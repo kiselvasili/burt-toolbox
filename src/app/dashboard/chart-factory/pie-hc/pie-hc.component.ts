@@ -20,6 +20,9 @@ export class PieHCComponent {
       credits: {
         enabled: false
       },
+      exporting: {
+        enabled: false
+      },
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,

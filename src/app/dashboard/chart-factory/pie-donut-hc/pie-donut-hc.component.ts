@@ -20,6 +20,9 @@ export class PieDonutHCComponent {
       credits: {
         enabled: false
       },
+      exporting: {
+        enabled: false
+      },
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: 0,

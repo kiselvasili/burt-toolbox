@@ -1,8 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Input } from '@angular/core';
 
 import { SwiperComponent, SwiperDirective, SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
-import { chartData } from '../../shared/constants/chart-data';
+// import { chartData } from '../../shared/constants/chart-data';
 
 @Component({
   selector: 'app-chart-factory',
@@ -10,8 +10,7 @@ import { chartData } from '../../shared/constants/chart-data';
   styleUrls: ['chart-factory.component.scss'],
 })
 export class ChartFactoryComponent {
-  //TODO type
-  public chartData = chartData;
+  @Input() chartItem;
 
   public config: SwiperConfigInterface = {
     a11y: true,

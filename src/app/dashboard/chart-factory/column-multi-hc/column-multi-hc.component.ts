@@ -26,6 +26,9 @@ export class ColumnMultiHCComponent {
       credits: {
         enabled: false
       },
+      exporting: {
+        enabled: false
+      },
       series: [
         {
           name: 'Line 1',
