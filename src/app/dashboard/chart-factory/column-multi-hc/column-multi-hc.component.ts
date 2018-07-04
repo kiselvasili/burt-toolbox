@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
 import { Chart } from 'angular-highcharts';
 
@@ -9,7 +9,9 @@ import { Chart } from 'angular-highcharts';
 })
 export class ColumnMultiHCComponent {
 
-  chart: Chart;
+  @Input('params') params;
+
+  public chart: Chart;
 
   ngOnInit() {
     this.init();
@@ -29,16 +31,7 @@ export class ColumnMultiHCComponent {
       exporting: {
         enabled: false
       },
-      series: [
-        {
-          name: 'Line 1',
-          data: [1, 2, 3]
-        },
-        {
-          name: 'Line 2',
-          data: [3, 4, 1]
-        }
-      ]
+      series: this.params,
     });
     this.chart = chart;
   }

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
 import { Chart } from 'angular-highcharts';
 
@@ -9,7 +9,9 @@ import { Chart } from 'angular-highcharts';
 })
 export class PieDonutHCComponent {
 
-  chart: Chart;
+  @Input('params') params;
+  
+  public chart: Chart;
 
   ngOnInit() {
     this.init();
@@ -56,20 +58,7 @@ export class PieDonutHCComponent {
         type: 'pie',
         name: 'Browser share',
         innerSize: '50%',
-        data: [
-          ['Chrome', 58.9],
-          ['Firefox', 13.29],
-          ['Internet Explorer', 13],
-          ['Edge', 3.78],
-          ['Safari', 3.42],
-          {
-            name: 'Other',
-            y: 7.61,
-            dataLabels: {
-              enabled: false
-            }
-          }
-        ]
+        data: this.params,
       }]
     });
 
