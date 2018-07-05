@@ -15,7 +15,6 @@ export class ChartPieDragComponent {
 
   @Input('params') 
   set params(val) {
-    console.log('val', val);
     this._params = val;
   };
 
@@ -53,7 +52,6 @@ export class ChartPieDragComponent {
       series.hiddenState.properties.endAngle = 90;
 
       chart.legend = new am4charts.Legend();
-      console.log(chart.legend);
     });
   }
 

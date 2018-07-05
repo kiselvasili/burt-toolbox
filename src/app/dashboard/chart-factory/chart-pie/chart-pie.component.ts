@@ -20,9 +20,6 @@ export class ChartPieComponenet {
   ngAfterViewInit() {
     var chart = am4core.create("chart-pie", am4charts.PieChart);
 
-    // chart.legend = new am4charts.Legend();
-    console.log(chart.legend);
-
     chart.data = this.params;
 
     chart.innerRadius = am4core.percent(40);
